@@ -1,6 +1,6 @@
-use sudoku_solver::grid::Grid;
-use sudoku_solver::algorithm::Algorithm;
 use std::time::Instant;
+use sudoku_solver::algorithm::Algorithm;
+use sudoku_solver::grid::Grid;
 
 fn main() {
     let start = Instant::now();
@@ -15,6 +15,5 @@ fn main() {
 
         grid.update();
         grid.draw();
-
     }
 }

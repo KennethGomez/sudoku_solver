@@ -1,6 +1,6 @@
-use crate::grid::Grid;
 use crate::algorithm::Algorithm;
 use crate::cell::Cell;
+use crate::grid::Grid;
 
 impl Algorithm for Grid {
     fn update(&mut self) {
@@ -19,7 +19,6 @@ impl Algorithm for Grid {
             y = ny;
             possibilities = np;
         }
-
 
         let current = self.current[x][y] as usize;
 
@@ -66,7 +65,7 @@ impl Algorithm for Grid {
         (tx.unwrap(), ty.unwrap(), possibilities)
     }
 
-    fn back(&mut self) -> (usize, usize, Vec<u8>)  {
+    fn back(&mut self) -> (usize, usize, Vec<u8>) {
         let tx: Option<usize> = None;
         let ty: Option<usize> = None;
         let possibilities = vec![0u8; 9];

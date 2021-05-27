@@ -1,3 +1,3 @@
-pub mod grid;
-pub mod cell;
 pub mod algorithm;
+pub mod cell;
+pub mod grid;
