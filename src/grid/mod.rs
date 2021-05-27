@@ -1,6 +1,6 @@
 pub mod algorithm;
 
-use colored::Colorize;
+use ansi_term::Color::{Green, Red};
 
 use crate::cell::Cell;
 
@@ -123,8 +123,8 @@ impl Grid {
         match cell {
             Cell::NONE => print!(" "),
             Cell::DEFAULT(n) => print!("{}", get_formatted(n)),
-            Cell::PROBABLE(n) => print!("{}", get_formatted(n).green()),
-            Cell::ERROR(n) => print!("{}", get_formatted(n).red()),
+            Cell::PROBABLE(n) => print!("{}", Green.paint(get_formatted(n))),
+            Cell::ERROR(n) => print!("{}", Red.paint(get_formatted(n))),
         }
     }
 
