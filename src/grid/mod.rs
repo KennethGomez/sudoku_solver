@@ -117,7 +117,7 @@ impl Grid {
 
     fn draw_cell(&self, cell: Cell) {
         fn get_formatted(n: u8) -> String {
-            format!("{}", n)
+            n.to_string()
         }
 
         match cell {
